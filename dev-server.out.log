@@ -1,0 +1,124 @@
+
+> app@0.1.0 dev
+> next dev --hostname 0.0.0.0 --port 3000
+
+▲ Next.js 16.3.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://0.0.0.0:3000
+✓ Ready in 1423ms
+✓ Running next.config.ts took 181ms
+Creating turbopack project { dir: 'D:\\PSE-1\\app', testMode: true }
+- Experiments (use with caution):
+  · serverActions
+
+ GET / 200 in 445ms (next.js: 246ms, application-code: 199ms)
+ GET / 200 in 51ms (next.js: 9ms, application-code: 41ms)
+✓ Compiled in 60ms
+ GET / 200 in 32ms (next.js: 14ms, application-code: 18ms)
+ GET /dashboard 200 in 396ms (next.js: 380ms, application-code: 16ms)
+ GET /map 200 in 288ms (next.js: 275ms, application-code: 14ms)
+ GET /alerts 200 in 147ms (next.js: 133ms, application-code: 15ms)
+ GET /shelters 200 in 175ms (next.js: 157ms, application-code: 18ms)
+ GET /safety-guide 200 in 32ms (next.js: 18ms, application-code: 14ms)
+ GET /safety-guide 200 in 25ms (next.js: 8ms, application-code: 17ms)
+✓ Compiled in 87ms
+ GET /safety-guide 200 in 24ms (next.js: 7ms, application-code: 17ms)
+✓ Compiled in 85ms
+ GET /system-analysis 200 in 242ms (next.js: 228ms, application-code: 14ms)
+ GET / 200 in 19ms (next.js: 9ms, application-code: 10ms)
+ GET /map 200 in 28ms (next.js: 14ms, application-code: 14ms)
+ GET / 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET / 200 in 21ms (next.js: 5ms, application-code: 16ms)
+✓ Compiled in 58ms
+ GET / 200 in 23ms (next.js: 10ms, application-code: 13ms)
+ GET / 200 in 18ms (next.js: 5ms, application-code: 13ms)
+ GET / 200 in 30ms (next.js: 9ms, application-code: 21ms)
+ GET / 200 in 31ms (next.js: 11ms, application-code: 19ms)
+✓ Compiled in 64ms
+✓ Compiled in 58ms
+ GET / 200 in 35ms (next.js: 11ms, application-code: 23ms)
+ GET / 200 in 94ms (next.js: 12ms, application-code: 82ms)
+ GET / 200 in 49ms (next.js: 6ms, application-code: 43ms)
+ GET / 200 in 46ms (next.js: 13ms, application-code: 33ms)
+✓ Compiled in 142ms
+ GET / 200 in 45ms (next.js: 10ms, application-code: 35ms)
+ GET / 200 in 49ms (next.js: 11ms, application-code: 38ms)
+ GET / 200 in 52ms (next.js: 9ms, application-code: 43ms)
+ GET /dashboard 200 in 30ms (next.js: 17ms, application-code: 13ms)
+ GET / 200 in 20ms (next.js: 9ms, application-code: 12ms)
+ GET /dashboard 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET /emergency-map 200 in 235ms (next.js: 222ms, application-code: 13ms)
+ GET /alerts 200 in 28ms (next.js: 8ms, application-code: 19ms)
+ GET /ai-assistant 200 in 167ms (next.js: 153ms, application-code: 13ms)
+ GET /safety-guide 200 in 29ms (next.js: 15ms, application-code: 13ms)
+ GET /system-analysis 200 in 25ms (next.js: 14ms, application-code: 11ms)
+ GET / 200 in 19ms (next.js: 5ms, application-code: 14ms)
+✓ Compiled in 63ms
+✓ Compiled in 96ms
+ GET / 200 in 32ms (next.js: 12ms, application-code: 20ms)
+ GET / 500 in 487ms (next.js: 6ms, application-code: 481ms)
+ GET / 500 in 68ms (next.js: 10ms, application-code: 58ms)
+ GET / 500 in 218ms (next.js: 14ms, application-code: 205ms)
+ GET / 500 in 70ms (next.js: 6ms, application-code: 64ms)
+ GET / 200 in 32ms (next.js: 11ms, application-code: 21ms)
+ GET / 200 in 24ms (next.js: 7ms, application-code: 18ms)
+ GET / 200 in 58ms (next.js: 9ms, application-code: 48ms)
+ GET / 200 in 38ms (next.js: 10ms, application-code: 28ms)
+ GET / 200 in 94ms (next.js: 32ms, application-code: 62ms)
+ GET / 200 in 42ms (next.js: 15ms, application-code: 27ms)
+ GET / 200 in 34ms (next.js: 9ms, application-code: 25ms)
+ GET / 200 in 49ms (next.js: 6ms, application-code: 43ms)
+ GET / 200 in 30ms (next.js: 11ms, application-code: 19ms)
+ GET / 200 in 25ms (next.js: 6ms, application-code: 19ms)
+ GET / 200 in 30ms (next.js: 10ms, application-code: 19ms)
+ GET / 200 in 24ms (next.js: 7ms, application-code: 18ms)
+ GET / 200 in 35ms (next.js: 11ms, application-code: 24ms)
+ GET / 200 in 26ms (next.js: 7ms, application-code: 19ms)
+ GET / 200 in 31ms (next.js: 11ms, application-code: 20ms)
+ GET / 200 in 23ms (next.js: 6ms, application-code: 17ms)
+ GET / 200 in 31ms (next.js: 12ms, application-code: 19ms)
+ GET / 200 in 28ms (next.js: 8ms, application-code: 20ms)
+ GET / 200 in 85ms (next.js: 14ms, application-code: 72ms)
+ GET / 200 in 41ms (next.js: 8ms, application-code: 32ms)
+ GET / 200 in 25ms (next.js: 8ms, application-code: 17ms)
+ GET / 200 in 26ms (next.js: 6ms, application-code: 20ms)
+ GET / 200 in 43ms (next.js: 9ms, application-code: 34ms)
+ GET / 200 in 21ms (next.js: 5ms, application-code: 16ms)
+ GET / 200 in 92ms (next.js: 7ms, application-code: 85ms)
+ GET / 200 in 34ms (next.js: 16ms, application-code: 17ms)
+ GET / 200 in 22ms (next.js: 5ms, application-code: 16ms)
+ GET / 200 in 54ms (next.js: 4ms, application-code: 49ms)
+ GET / 200 in 28ms (next.js: 8ms, application-code: 21ms)
+ GET / 200 in 28ms (next.js: 8ms, application-code: 20ms)
+ GET / 200 in 64ms (next.js: 9ms, application-code: 55ms)
+ GET / 200 in 53ms (next.js: 7ms, application-code: 46ms)
+✓ Compiled in 108ms
+ GET / 200 in 34ms (next.js: 11ms, application-code: 22ms)
+ GET / 200 in 43ms (next.js: 9ms, application-code: 33ms)
+ GET / 200 in 93ms (next.js: 14ms, application-code: 79ms)
+ GET / 200 in 69ms (next.js: 26ms, application-code: 43ms)
+ GET / 200 in 23ms (next.js: 6ms, application-code: 17ms)
+✓ Compiled in 121ms
+ GET / 200 in 56ms (next.js: 5ms, application-code: 50ms)
+✓ Compiled in 72ms
+ GET / 200 in 21ms (next.js: 6ms, application-code: 15ms)
+ GET / 200 in 17ms (next.js: 4ms, application-code: 13ms)
+ GET / 200 in 38ms (next.js: 5ms, application-code: 33ms)
+ GET /dashboard 200 in 30ms (next.js: 17ms, application-code: 13ms)
+ GET /dashboard 200 in 16ms (next.js: 5ms, application-code: 11ms)
+ GET /dashboard 200 in 15ms (next.js: 4ms, application-code: 11ms)
+ GET /map 200 in 28ms (next.js: 15ms, application-code: 13ms)
+ GET /map 200 in 16ms (next.js: 4ms, application-code: 12ms)
+ GET /map 200 in 16ms (next.js: 5ms, application-code: 11ms)
+ GET /map 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET /map 200 in 17ms (next.js: 5ms, application-code: 12ms)
+ GET /map 200 in 15ms (next.js: 4ms, application-code: 11ms)
+ GET /map 200 in 16ms (next.js: 5ms, application-code: 11ms)
+ GET /map 200 in 43ms (next.js: 5ms, application-code: 37ms)
+ GET / 200 in 43ms (next.js: 29ms, application-code: 14ms)
+ GET /map 200 in 19ms (next.js: 5ms, application-code: 15ms)
+ GET / 200 in 19ms (next.js: 6ms, application-code: 13ms)
+✓ Compiled in 72ms
+ GET / 200 in 20ms (next.js: 7ms, application-code: 13ms)
+ GET / 200 in 37ms (next.js: 5ms, application-code: 32ms)
+ GET / 200 in 20ms (next.js: 6ms, application-code: 14ms)

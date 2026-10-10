@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0.3" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shield -->
+  <path d="M50 8 L85 20 V44 C85 67 70 85 50 92 C30 85 15 67 15 44 V20 L50 8 Z" fill="url(#shieldGrad)" stroke="#F87171" stroke-width="2" />
+  <!-- Inner Border -->
+  <path d="M50 14 L79 24 V44 C79 63 66 79 50 85 C34 79 21 63 21 44 V24 L50 14 Z" fill="url(#glowGrad)" opacity="0.4" />
+  <!-- White Emergency Medical Cross -->
+  <path d="M44 32 H56 V44 H68 V56 H56 V68 H44 V56 H32 V44 H44 V32 Z" fill="#FFFFFF" />
+</svg>

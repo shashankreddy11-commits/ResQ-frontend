@@ -1,0 +1,58 @@
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ReferenceError: dynamic is not defined
+    at Module.eval (app\page.tsx:10:29)
+   8 | import { WorldWeatherMap } from "@/components/world-weather-map";
+   9 |
+> 10 | const DynamicEmergencyMap = dynamic(
+     |                             ^
+  11 |   () => import("../components/emergency-map").then((mod) => mod.EmergencyMap),
+  12 |   {
+  13 |     ssr: false, {
+  digest: '3072811071'
+}
+⨯ ReferenceError: dynamic is not defined
+    at Module.eval (app\page.tsx:10:29)
+   8 | import { WorldWeatherMap } from "@/components/world-weather-map";
+   9 |
+> 10 | const DynamicEmergencyMap = dynamic(
+     |                             ^
+  11 |   () => import("../components/emergency-map").then((mod) => mod.EmergencyMap),
+  12 |   {
+  13 |     ssr: false, {
+  digest: '3072811071'
+}
+[browser] Uncaught ReferenceError: dynamic is not defined
+    at module evaluation (app/page.tsx:10:29)
+   8 | import { WorldWeatherMap } from "@/components/world-weather-map";
+   9 |
+> 10 | const DynamicEmergencyMap = dynamic(
+     |                             ^
+  11 |   () => import("../components/emergency-map").then((mod) => mod.EmergencyMap),
+  12 |   {
+  13 |     ssr: false,
+⨯ ReferenceError: window is not defined
+    at Module.eval (components\world-weather-map.tsx:4:1)
+    at Module.eval (app\page.tsx:9:1)
+  2 |
+  3 | import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+> 4 | import L from "leaflet";
+    | ^
+  5 | import { getLiveWeather, type LiveWeatherSnapshot } from "@/lib/live-weather";
+  6 |
+  7 | interface WeatherPlace { {
+  digest: '4261712422'
+}
+⨯ ReferenceError: window is not defined
+    at Module.eval (components\world-weather-map.tsx:4:1)
+    at Module.eval (app\page.tsx:9:1)
+  2 |
+  3 | import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+> 4 | import L from "leaflet";
+    | ^
+  5 | import { getLiveWeather, type LiveWeatherSnapshot } from "@/lib/live-weather";
+  6 |
+  7 | interface WeatherPlace { {
+  digest: '4261712422'
+}
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

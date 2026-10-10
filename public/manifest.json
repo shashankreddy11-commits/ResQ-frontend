@@ -1,0 +1,16 @@
+{
+  "name": "ResQ — Emergency Response",
+  "short_name": "ResQ",
+  "description": "Instant 24/7 one-click SOS distress dispatch, AI severity ranking, live GIS safe evacuation routing, and emergency services dispatch.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1F2A44",
+  "theme_color": "#1F2A44",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

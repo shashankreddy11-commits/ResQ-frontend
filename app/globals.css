@@ -1,0 +1,414 @@
+@import "leaflet/dist/leaflet.css";
+@import "tailwindcss";
+
+:root {
+  --sidebar-bg: #0B1F4B;
+  --dark-navy: #102A43;
+  --primary-blue: #2563EB;
+  --light-blue: #EAF3FF;
+  --background: #F4F7FB;
+  --card-bg: #FFFFFF;
+  --primary-text: #172033;
+  --secondary-text: #667085;
+  --border-color: #E4E7EC;
+  --success: #16A34A;
+  --success-light: #EAF8EF;
+  --warning: #F59E0B;
+  --warning-light: #FFF7E6;
+  --danger: #DC2626;
+  --danger-light: #FDECEC;
+  --purple-ai: #7C3AED;
+  --purple-light: #F3E8FF;
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+html, body {
+  max-width: 100vw;
+  width: 100%;
+  min-height: 100%;
+}
+
+body { 
+  margin: 0; 
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--background); 
+  color: var(--primary-text); 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', 'Inter', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+img, video, canvas, svg, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leaflet-tooltip.world-weather-label {
+  border: 1px solid #d8e2ee;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #0b1f4b;
+  padding: 3px 6px;
+  box-shadow: 0 2px 8px rgba(11, 31, 75, 0.14);
+  font: 700 10px/1.2 Inter, sans-serif;
+}
+
+.leaflet-tooltip.world-weather-label::before {
+  display: none;
+}
+
+.weather-condition-marker {
+  border: 0;
+  background: transparent;
+}
+
+.weather-condition-marker__badge {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 0 2px var(--marker-color), 0 2px 6px rgb(15 23 42 / 24%);
+}
+
+.weather-condition-marker__badge--selected {
+  width: 36px;
+  height: 36px;
+  margin: -2px;
+  box-shadow: 0 0 0 3px var(--marker-color), 0 0 0 6px rgb(255 255 255 / 85%), 0 3px 9px rgb(15 23 42 / 28%);
+}
+
+.weather-condition-marker__badge img,
+.weather-condition-svg,
+.weather-condition-svg svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+}
+
+.weather-condition-svg svg {
+  fill: none;
+  stroke: #173b62;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+button, input, select, textarea { 
+  font-family: inherit; 
+}
+
+button, a { 
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* Accessible Focus States */
+:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* UI Card Styling */
+.saas-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(16, 24, 40, 0.05), 0 1px 2px -1px rgba(16, 24, 40, 0.05);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saas-card:hover {
+  border-color: #D0D5DD;
+  box-shadow: 0 4px 12px -2px rgba(16, 24, 40, 0.08), 0 2px 4px -2px rgba(16, 24, 40, 0.04);
+}
+
+.saas-card-interactive {
+  cursor: pointer;
+}
+
+/* Loading Skeletons */
+.skeleton {
+  background: linear-gradient(90deg, rgba(228, 231, 236, 0.4) 25%, rgba(228, 231, 236, 0.8) 37%, rgba(228, 231, 236, 0.4) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-shimmer 1.4s ease infinite;
+  border-radius: 0.5rem;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Keyframe Animations */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes drer-ping {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.live-situation-leaflet {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+.live-situation-page,
+.live-map-column,
+.live-map-shell {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.live-situation-page {
+  overflow-x: clip;
+}
+
+.live-situation-leaflet .leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #cbd5e1;
+  font-family: Inter, sans-serif;
+}
+
+.live-situation-leaflet .leaflet-control-attribution {
+  max-width: min(65vw, 430px);
+  overflow: hidden;
+  border-radius: 5px 0 0;
+  background: rgb(255 255 255 / 91%);
+  color: #334155;
+  font-size: 10px;
+}
+
+.live-situation-leaflet .leaflet-control-attribution a {
+  color: #1d4ed8;
+}
+
+.live-situation-leaflet .leaflet-popup-content-wrapper {
+  border: 1px solid #dbe3ed;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgb(15 23 42 / 18%);
+}
+
+.live-situation-leaflet .leaflet-popup-content {
+  margin: 12px 14px;
+  min-width: 180px;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.live-map-popup > strong {
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.live-map-popup > p {
+  margin: 4px 0 8px;
+  color: #475569;
+}
+
+.live-map-popup dl {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+}
+
+.live-map-popup__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.live-map-popup__row dt {
+  color: #64748b;
+}
+
+.live-map-popup__row dd {
+  margin: 0;
+  color: #0f172a;
+  font-weight: 600;
+  text-align: right;
+}
+
+.live-map-popup__link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.live-situation-leaflet .live-weather-cell-icon {
+  border: 0;
+  background: transparent;
+}
+
+.live-situation-leaflet .live-service-marker {
+  border: 0;
+  background: transparent;
+}
+
+.live-service-marker span {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--service-marker-color, #2563eb);
+  box-shadow: 0 2px 7px rgb(15 23 42 / 40%);
+  color: #fff;
+}
+
+.live-service-marker svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.live-measurement-label {
+  border: 0;
+  background: transparent;
+}
+
+.live-measurement-label span {
+  display: inline-block;
+  white-space: nowrap;
+  border: 1px solid rgb(255 255 255 / 90%);
+  border-radius: 999px;
+  background: #0b1f3a;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 30%);
+}
+
+.live-weather-cell {
+  display: flex;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 255 255 / 90%);
+  border-radius: 999px;
+  background: rgb(15 23 42 / 78%);
+  box-shadow: 0 1px 5px rgb(15 23 42 / 30%);
+  color: white;
+  font: 700 9px/1 Inter, sans-serif;
+  white-space: nowrap;
+}
+
+.live-map-shell:fullscreen {
+  height: 100dvh !important;
+  width: 100vw !important;
+  max-height: none !important;
+  max-width: none !important;
+  border: 0;
+  border-radius: 0;
+  background: #0f172a;
+}
+
+.live-map-shell:fullscreen .live-situation-leaflet {
+  height: 100dvh;
+}
+
+@media (max-width: 767px) {
+  .live-situation-page {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .live-situation-page > .relative.grid {
+    width: 100%;
+    min-width: 0;
+    flex: none;
+  }
+
+  .live-map-column {
+    height: min(67dvh, 650px);
+    flex: none;
+  }
+
+  .live-map-shell {
+    height: min(67dvh, 650px);
+    min-height: 450px;
+    flex: none;
+  }
+
+  .live-layer-panel {
+    inset: auto 12px 104px !important;
+    width: auto !important;
+    max-height: 54%;
+    border-radius: 18px;
+  }
+
+  .live-weather-panel {
+    bottom: 104px;
+    max-height: 56%;
+  }
+}
